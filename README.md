@@ -1,2 +1,5 @@
-# Python-Learning
-Here i display all my code and projects which i will write and build for solving problems
+# Python Learning
+
+This repository documents my Python learning journey.
+
+It includes problem-solving scripts, practice exercises, and debugged solutions focused on building strong programming fundamentals.
