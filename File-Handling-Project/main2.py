@@ -80,19 +80,18 @@ def updatefile():
 
 
 def delfile():
-    readfileandfolder()   
+    readfileandfolder()
     base_path = Path("File-Handling-Project")
 
-    
     name = input("Which file to delete: ")
-
     file_path = base_path / name
 
-    if file_path.exists():
+    if file_path.exists() and file_path.is_file():
         os.remove(file_path)
         print("File deleted successfully.")
     else:
         print("File does not exist.")
+
 print("Enter 1 for creating a File.")
 print("Enter 2 for reading a File")
 print("Enter 3 for updating a File")
