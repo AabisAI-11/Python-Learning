@@ -1,14 +1,10 @@
 from pathlib import Path
-import os
-
 def readfileandfolder():
-    path = Path('File-Handling-Project')
-    items = list(path.rglob('*'))
-
-    print("Your files are:")
-    for i, item in enumerate(items):
-        print(f"{i+1}: {item}")
-
+    path=Path('')
+    items=list(path.rglob('*'))
+    print("your files are:")
+    for i, items in enumerate(items):
+        print(f"{i+1}:{items}")
 
 def createfile():
     try:
@@ -77,21 +73,20 @@ def updatefile():
 
     except Exception as err:
         print(f"Error occurred: {err}")
-
-
 def delfile():
-    readfileandfolder()
-    base_path = Path("File-Handling-Project")
+    try:
+        readfileandfolder()
+        name = input("Which file to delete: ")
+        p = Path(name)
 
-    name = input("Which file to delete: ")
-    file_path = base_path / name
+        if p.exists() and p.is_file():
+            os.remove(p)
+            print("File removed successfully.")
+        else:
+            print("File does not exist.")
 
-    if file_path.exists() and file_path.is_file():
-        os.remove(file_path)
-        print("File deleted successfully.")
-    else:
-        print("File does not exist.")
-
+    except Exception as err:
+        print(f"Error occurred: {err}")
 print("Enter 1 for creating a File.")
 print("Enter 2 for reading a File")
 print("Enter 3 for updating a File")
@@ -103,8 +98,6 @@ if check==2:
     readfile()
 if check==3:
    updatefile()
-if check==4:
-    delfile()
 
 
 
