@@ -81,7 +81,7 @@ obj.__show()#it will tell demo object has no attribute show'''
 obj=demo()
 obj.show()#it will print all the methods and objects
 '''
-print("HELLO WORLD")
+print("I am aabgeen aabshar")
 
 
 
